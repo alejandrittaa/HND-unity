@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 411cf3a578a1e1b4f95b95bc4789a89f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.71
+      value: 1.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 411cf3a578a1e1b4f95b95bc4789a89f,
         type: 3}
@@ -313,10 +313,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 524010198}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 411cf3a578a1e1b4f95b95bc4789a89f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 641634058}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 411cf3a578a1e1b4f95b95bc4789a89f,
         type: 3}
       insertIndex: -1
@@ -1103,7 +1099,7 @@ GameObject:
   - component: {fileID: 102055088}
   - component: {fileID: 102055087}
   m_Layer: 0
-  m_Name: "[BuildingBlock] Hierbas M\xE1gicas (2)"
+  m_Name: '[BuildingBlock] Pez (2)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2470,7 +2466,7 @@ GameObject:
   - component: {fileID: 243688209}
   - component: {fileID: 243688208}
   m_Layer: 0
-  m_Name: '[BuildingBlock] Manzana'
+  m_Name: '[BuildingBlock] Zanahoria'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3445,7 +3441,7 @@ GameObject:
   - component: {fileID: 324393247}
   - component: {fileID: 324393246}
   m_Layer: 0
-  m_Name: '[BuildingBlock] Manzana (1)'
+  m_Name: '[BuildingBlock] Zanahoria (1)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7237,27 +7233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1669648255ff5e54480d4e1b5d75282b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &641634058
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641634053}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.07054561
-  m_Center: {x: 0.0447692, y: 0.0078017935, z: 0.05283403}
 --- !u!1 &645352834
 GameObject:
   m_ObjectHideFlags: 0
@@ -8898,7 +8873,7 @@ GameObject:
   - component: {fileID: 789555880}
   - component: {fileID: 789555879}
   m_Layer: 0
-  m_Name: "[BuildingBlock] Hierbas M\xE1gicas"
+  m_Name: '[BuildingBlock] Pez'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15974,7 +15949,7 @@ GameObject:
   - component: {fileID: 1220827313}
   - component: {fileID: 1220827312}
   m_Layer: 0
-  m_Name: "[BuildingBlock] Hierbas M\xE1gicas (1)"
+  m_Name: '[BuildingBlock] Pez (1)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23666,7 +23641,7 @@ GameObject:
   - component: {fileID: 1992083156}
   - component: {fileID: 1992083155}
   m_Layer: 0
-  m_Name: '[BuildingBlock] Manzana (2)'
+  m_Name: '[BuildingBlock] Zanahoria (2)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
