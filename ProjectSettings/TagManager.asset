@@ -11,6 +11,8 @@ TagManager:
   - PassThrough
   - SamplesInfoPanel
   - ObjetoCorrecto
+  - Zanahoria
+  - Pez
   layers:
   - Default
   - TransparentFX
