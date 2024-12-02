@@ -13,6 +13,9 @@ TagManager:
   - ObjetoCorrecto
   - Zanahoria
   - Pez
+  - DetectorIngredientes
+  - DetectorProximidadCaldero
+  - Enfermo1
   layers:
   - Default
   - TransparentFX

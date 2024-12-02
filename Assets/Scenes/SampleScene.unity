@@ -3198,6 +3198,102 @@ MonoBehaviour:
   _handJointId: 8
   _localPositionOffset: {x: 0.017, y: 0, z: 0}
   _rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+--- !u!1 &267469557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267469558}
+  - component: {fileID: 267469560}
+  - component: {fileID: 267469559}
+  m_Layer: 0
+  m_Name: Enfermo1
+  m_TagString: Enfermo1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267469558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267469557}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.16413844, y: 1.67, z: -0.033461813}
+  m_LocalScale: {x: 0.02373614, y: 0.5788175, z: 0.023639582}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1211157614}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &267469559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267469557}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &267469560
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267469557}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &278301772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,7 +4240,7 @@ GameObject:
   - component: {fileID: 369180945}
   m_Layer: 0
   m_Name: DetectorProximidadCaldero
-  m_TagString: Untagged
+  m_TagString: DetectorProximidadCaldero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6272,7 +6368,7 @@ GameObject:
   - component: {fileID: 524010201}
   m_Layer: 0
   m_Name: DetectorDeIngredientes
-  m_TagString: Untagged
+  m_TagString: DetectorIngredientes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6599,8 +6695,8 @@ Transform:
   m_GameObject: {fileID: 541875066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16413844, y: 5.845349, z: -0.033461813}
-  m_LocalScale: {x: 0.044655416, y: 10.690599, z: 0.04447376}
+  m_LocalPosition: {x: 0.16413844, y: 0.91, z: -0.033461813}
+  m_LocalScale: {x: 0.044655416, y: 1.0889444, z: 0.04447376}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1211157614}
@@ -15984,6 +16080,7 @@ Transform:
   - {fileID: 233584727}
   - {fileID: 400808523}
   - {fileID: 541875070}
+  - {fileID: 267469558}
   - {fileID: 953201031}
   - {fileID: 1013870144}
   - {fileID: 1181624006}
@@ -16010,6 +16107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
@@ -16130,6 +16231,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1248197596}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364120619}
     - targetCorrespondingSourceObject: {fileID: 100004, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       insertIndex: 1
@@ -17965,6 +18070,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 917426676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1364120618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1216012390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1364120619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364120618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e36edd4e82837b4c87afc65517541a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receta1: {fileID: 217553585}
+  receta2: {fileID: 1528095844}
+  receta3: {fileID: 1733073884}
 --- !u!1 &1376566379
 GameObject:
   m_ObjectHideFlags: 0
