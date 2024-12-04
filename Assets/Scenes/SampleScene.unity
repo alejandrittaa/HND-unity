@@ -3204,6 +3204,14 @@ MonoBehaviour:
   _handJointId: 8
   _localPositionOffset: {x: 0.017, y: 0, z: 0}
   _rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  _jointId: 0
+  _posOffset: {x: 0, y: 0, z: 0}
+  _rotOffset: {x: 0, y: 0, z: 0, w: 1}
+  _useLegacyOrientation: 0
+  _mirrorOffsetsForLeftHand: 1
+  _freezeRotationX: 0
+  _freezeRotationY: 0
+  _freezeRotationZ: 0
 --- !u!1 &267469557
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,11 +3239,11 @@ Transform:
   m_GameObject: {fileID: 267469557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16413844, y: 1.67, z: -0.033461813}
-  m_LocalScale: {x: 0.02373614, y: 0.5788175, z: 0.023639582}
+  m_LocalPosition: {x: 0, y: 0.69792354, z: 0}
+  m_LocalScale: {x: 0.53154004, y: 0.53154, z: 0.53154004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1211157614}
+  m_Father: {fileID: 541875070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &267469559
 BoxCollider:
@@ -6704,7 +6712,8 @@ Transform:
   m_LocalPosition: {x: 0.16413844, y: 0.91, z: -0.033461813}
   m_LocalScale: {x: 0.044655416, y: 1.0889444, z: 0.04447376}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 267469558}
   m_Father: {fileID: 1211157614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &544348903
@@ -8393,6 +8402,7 @@ MonoBehaviour:
   _hand: {fileID: 1417249240}
   _updateRootPose: 1
   _updateRootScale: 1
+  _updateVisibility: 1
   _skinnedMeshRenderer: {fileID: 1414882319}
   _root: {fileID: 0}
   _handMaterialPropertyBlockEditor: {fileID: 1414882318}
@@ -8421,6 +8431,10 @@ MonoBehaviour:
   - {fileID: 1934540132}
   - {fileID: 837615715}
   - {fileID: 768516213}
+  _openXRSkinnedMeshRenderer: {fileID: 0}
+  _openXRRoot: {fileID: 0}
+  _openXRHandMaterialPropertyBlockEditor: {fileID: 0}
+  _openXRJointTransforms: []
 --- !u!1 &686926391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -16098,7 +16112,6 @@ Transform:
   - {fileID: 233584727}
   - {fileID: 400808523}
   - {fileID: 541875070}
-  - {fileID: 267469558}
   - {fileID: 953201031}
   - {fileID: 1013870144}
   - {fileID: 1181624006}
@@ -23900,6 +23913,7 @@ MonoBehaviour:
   _hand: {fileID: 1130683090}
   _updateRootPose: 1
   _updateRootScale: 1
+  _updateVisibility: 1
   _skinnedMeshRenderer: {fileID: 97964497}
   _root: {fileID: 0}
   _handMaterialPropertyBlockEditor: {fileID: 97964496}
@@ -23928,6 +23942,10 @@ MonoBehaviour:
   - {fileID: 1574471763}
   - {fileID: 858985670}
   - {fileID: 1106344332}
+  _openXRSkinnedMeshRenderer: {fileID: 0}
+  _openXRRoot: {fileID: 0}
+  _openXRHandMaterialPropertyBlockEditor: {fileID: 0}
+  _openXRJointTransforms: []
 --- !u!1 &1932964393
 GameObject:
   m_ObjectHideFlags: 0
@@ -24254,6 +24272,14 @@ MonoBehaviour:
   _handJointId: 8
   _localPositionOffset: {x: 0.017, y: 0, z: 0}
   _rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  _jointId: 0
+  _posOffset: {x: 0, y: 0, z: 0}
+  _rotOffset: {x: 0, y: 0, z: 0, w: 1}
+  _useLegacyOrientation: 0
+  _mirrorOffsetsForLeftHand: 1
+  _freezeRotationX: 0
+  _freezeRotationY: 0
+  _freezeRotationZ: 0
 --- !u!1 &1986668211
 GameObject:
   m_ObjectHideFlags: 0
