@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-
+    [SerializeField] private CalderoScript caldero; // Referencia al script del caldero
     [SerializeField] GameObject receta1; 
     [SerializeField] GameObject receta2;
     [SerializeField] GameObject receta3;
@@ -30,24 +30,33 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Para registrar que ha entrado a hablar con el enfermo
+        //PARA COMPROBAR SI HA ENTRADO A CASA DEL ENFERMO
 
         if(other.gameObject.CompareTag("Enfermo1"))
         {
+            Debug.Log("Has visitado al enfermo 1");
             entradaEnfermo1 = true;
+            caldero.SetIngredientesCorrectos(new List<string> { "HierbaAzul", "RaizMágica", "FlorDorada" });
+            Debug.Log("Ingredientes para Enfermo 1 asignados.");
         }
         else if(other.gameObject.CompareTag("Enfermo2"))
         {
+            Debug.Log("Has visitado al enfermo 2");
             entradaEnfermo2 = true;
-            recetaVisible = false;
+            caldero.SetIngredientesCorrectos(new List<string> { "BayasRojas", "HojaSagrada", "CristalMístico" });
+            Debug.Log("Ingredientes para Enfermo 2 asignados.");
         }
         else if (other.gameObject.CompareTag("Enfermo3"))
         {
+            Debug.Log("Has visitado al enfermo 3");
             entradaEnfermo3 = true;
-            recetaVisible = false;
+            caldero.SetIngredientesCorrectos(new List<string> { "SetaLuminosa", "AguaBendita", "CortezaMilenaria" });
+            Debug.Log("Ingredientes para Enfermo 3 asignados.");
         }
 
-        //Para comprobar si ha hablado con el enfermo correspondiente y si esta cerca del caldero
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //PARA MOSTRAR LA RECETA CORRESPONDIENTE SI ESTÁ AL LADO DEL CALDERO
         if (entradaEnfermo1 == true && other.gameObject.CompareTag("DetectorProximidadCaldero"))
         {
             //mostramos la receta 1
