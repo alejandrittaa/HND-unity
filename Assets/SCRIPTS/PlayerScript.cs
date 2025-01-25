@@ -10,9 +10,10 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] GameObject receta2;
     [SerializeField] GameObject receta3;
     //[SerializeField] GameObject receta4;
-    private bool entradaEnfermo1;
-    private bool entradaEnfermo2;
-    private bool entradaEnfermo3;
+    private bool entradaEnfermo1 = false;
+    private bool entradaEnfermo2 = false;
+    private bool entradaEnfermo3 = false;
+    public bool recetaVisible;
     //private bool recetaAnteriorTerminada;
     //private bool entradaEnfermo4;
 
@@ -38,24 +39,36 @@ public class PlayerScript : MonoBehaviour
         else if(other.gameObject.CompareTag("Enfermo2"))
         {
             entradaEnfermo2 = true;
+            recetaVisible = false;
         }
         else if (other.gameObject.CompareTag("Enfermo3"))
         {
             entradaEnfermo3 = true;
+            recetaVisible = false;
         }
 
         //Para comprobar si ha hablado con el enfermo correspondiente y si esta cerca del caldero
         if (entradaEnfermo1 == true && other.gameObject.CompareTag("DetectorProximidadCaldero"))
         {
+            //mostramos la receta 1
             receta1.SetActive(true);
+            recetaVisible = true;
         }
         else if (entradaEnfermo2 == true && other.gameObject.CompareTag("DetectorProximidadCaldero"))
         {
-            receta2.SetActive(true);
+            //si no hay ninguna otra receta mostrandose, muestra la 2
+            if (recetaVisible == false)
+            {
+                receta2.SetActive(true);
+            }
         }
         else if (entradaEnfermo3 == true && other.gameObject.CompareTag("DetectorProximidadCaldero"))
         {
-            receta3.SetActive(true);
+            //si no hay ninguna otra receta mostrandose, muestra la 3
+            if (recetaVisible == false)
+            {
+                receta2.SetActive(true);
+            }
         }
 
     }
