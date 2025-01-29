@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("Has visitado al enfermo 1");
             entradaEnfermo1 = true;
-            caldero.SetIngredientesCorrectos(new List<string> { "HierbaAzul", "RaizMágica", "FlorDorada" });
+            caldero.SetIngredientesCorrectos(new List<string> { "Zanahoria", "Zanahoria", "Zanahoria" });
             Debug.Log("Ingredientes para Enfermo 1 asignados.");
         }
         else if(other.gameObject.CompareTag("Enfermo2"))

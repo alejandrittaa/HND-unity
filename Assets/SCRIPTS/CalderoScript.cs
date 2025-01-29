@@ -40,10 +40,10 @@ public class CalderoScript : MonoBehaviour
             Debug.Log("¡Ingrediente incorrecto!");
 
             //Expulsión con animación
-            if (animator != null)
+            /*if (animator != null)
             {
                 animator.SetTrigger("Error"); // Reproduce la animación de error, en caso de que hayamos puesto una
-            }
+            }*/
 
             // Expulsar ingrediente del caldero
             Rigidbody rb = other.GetComponent<Rigidbody>();
