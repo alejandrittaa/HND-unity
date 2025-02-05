@@ -12,7 +12,7 @@ public class Mercader : MonoBehaviour
     public string objetoNecesario;
     public float distanciaInteraccion = 3f;
     private bool misionCompletada = false;
-    private Transform jugador;
+    //private Transform jugador;
     private bool HabladoAntes = false;
     
 
@@ -24,61 +24,71 @@ public class Mercader : MonoBehaviour
     public GameObject detector2;
     public GameObject detector3;
 
+    public LayerMask layerAgarrables; // 🔹 Para detectar solo objetos de la capa Agarrables
+
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag("Player").transform;
         mensajeUI.SetActive(false);
     }
 
-
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        float distancia = Vector3.Distance(transform.position, jugador.position);
-
-        if (distancia < distanciaInteraccion)
+        if (other.CompareTag("Player"))
         {
+            mensajeUI.SetActive(true);
             MostrarMensaje();
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
             mensajeUI.SetActive(false);
         }
     }
 
+
     void MostrarMensaje()
     {
-        mensajeUI.SetActive(true);
 
         if (!misionCompletada)
         {
-            //si el jugador tiene el objeto y ya ha hablado antes con el mercader...
-            if (JugadorTieneObjeto() && HabladoAntes == true)
+            if (JugadorTieneObjeto() && HabladoAntes)
             {
                 textoMensaje.text = $"Gracias por traerme {objetoNecesario}, te lo agradezco.";
                 misionCompletada = true;
+                EliminarObjeto(); // ✅ Eliminamos el objeto solo al completar la misión
             }
-            else //si no ha hablado antes con el mercader...
+            else if (!HabladoAntes)
             {
                 textoMensaje.text = $"Hola, coge lo que necesites de mi puesto, pero a cambio, necesito que me traigas {objetoNecesario}.";
                 HabladoAntes = true;
             }
-        }
-        else //si no ha completado la misión...
-        {
-            textoMensaje.text = "Todavía no tienes mi " + objetoNecesario + "? Traémelo porfavor, lo necesito.";
+            else
+            {
+                textoMensaje.text = "Todavía no tienes mi " + objetoNecesario + "? Tráemelo por favor, lo necesito.";
+            }
         }
     }
 
+    // ✅ Método para solo DETECTAR el objeto sin eliminarlo
     bool JugadorTieneObjeto()
     {
-        // 🔍 Buscar el objeto en los detectores
-        if (VerificarYEliminarObjeto(detector1) || VerificarYEliminarObjeto(detector2) || VerificarYEliminarObjeto(detector3))
+        return (VerificarObjeto(detector1) || VerificarObjeto(detector2) || VerificarObjeto(detector3));
+    }
+
+
+    // ✅ Método para SOLO verificar si hay un objeto en el detector
+    bool VerificarObjeto(GameObject detector)
+    {
+        if (detector != null)
         {
-            return true;
+            DetectorObjetos scriptDetector = detector.GetComponent<DetectorObjetos>();
+            return scriptDetector != null && scriptDetector.objetoDetectado == objetoNecesario;
         }
         return false;
     }
-
     bool VerificarYEliminarObjeto(GameObject detector)
     {
         if (detector != null)
@@ -93,5 +103,13 @@ public class Mercader : MonoBehaviour
             }
         }
         return false;
+    }
+
+    // ✅ Método para ELIMINAR el objeto tras completar la misión
+    void EliminarObjeto()
+    {
+        VerificarYEliminarObjeto(detector1);
+        VerificarYEliminarObjeto(detector2);
+        VerificarYEliminarObjeto(detector3);
     }
 }
