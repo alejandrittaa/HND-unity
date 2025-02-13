@@ -8,7 +8,7 @@ namespace IdyllicFantasyNature
         [SerializeField] private bool _enableBendFeature = false;
         [Tooltip("The origin where the impact on the object starts")]
         [SerializeField] private Transform _bendOrigin;
-        [Range(0.3f, 1)]
+        [Range(0f, 1)]
         [Tooltip("object starts to bend when the player is at a certain distance")]
         [SerializeField] private float _startBendRange;
         [Range(0, 1)]

@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     private bool entradaEnfermo1 = false;
     private bool entradaEnfermo2 = false;
     private bool entradaEnfermo3 = false;
-    public bool recetaVisible;
+    public bool recetaVisible = false;
     //private bool recetaAnteriorTerminada;
     //private bool entradaEnfermo4;
 
@@ -25,7 +25,12 @@ public class PlayerScript : MonoBehaviour
     
     void Update()
     {
-        
+        if(recetaVisible == false)
+        {
+            receta1.SetActive(false);
+            receta2.SetActive(false);
+            receta3.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -7,7 +7,7 @@ using TMPro; // Importar TextMeshPro
 
 public class Mercader : MonoBehaviour
 {
-
+/*
     public string nombreMercader;
     public string objetoNecesario;
     public float distanciaInteraccion = 3f;
@@ -112,4 +112,5 @@ public class Mercader : MonoBehaviour
         VerificarYEliminarObjeto(detector2);
         VerificarYEliminarObjeto(detector3);
     }
+    */
 }
