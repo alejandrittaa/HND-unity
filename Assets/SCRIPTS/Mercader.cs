@@ -7,24 +7,16 @@ using TMPro; // Importar TextMeshPro
 
 public class Mercader : MonoBehaviour
 {
-/*
     public string nombreMercader;
-    public string objetoNecesario;
-    public float distanciaInteraccion = 3f;
-    private bool misionCompletada = false;
-    //private Transform jugador;
-    private bool HabladoAntes = false;
-    
+    public string objetoNecesario; // 🔹 Cada mercader tendrá un objeto distinto
+    private bool habladoAntes = false;
+    private bool pedidoEnviado = false;
 
-    public GameObject mensajeUI; // Panel de texto en la UI
-    public TMP_Text textoMensaje;
+    public GameObject mensajeUI; // Panel de UI
+    public TMP_Text textoMensaje; // Texto dentro del panel
 
-    // 🔹 Referencias a los 3 detectores de objetos
-    public GameObject detector1;
-    public GameObject detector2;
-    public GameObject detector3;
-
-    public LayerMask layerAgarrables; // 🔹 Para detectar solo objetos de la capa Agarrables
+    public PolloCorreo polloCorreo; // Referencia al pollo del correo
+    public bool haSolicitadoPedido = false; // ✅ Controla si ha hecho su petición
 
     void Start()
     {
@@ -48,69 +40,27 @@ public class Mercader : MonoBehaviour
         }
     }
 
-
     void MostrarMensaje()
     {
-
-        if (!misionCompletada)
+        if (pedidoEnviado) // ✅ Si ya le llegó el pedido, mensaje final
         {
-            if (JugadorTieneObjeto() && HabladoAntes)
-            {
-                textoMensaje.text = $"Gracias por traerme {objetoNecesario}, te lo agradezco.";
-                misionCompletada = true;
-                EliminarObjeto(); // ✅ Eliminamos el objeto solo al completar la misión
-            }
-            else if (!HabladoAntes)
-            {
-                textoMensaje.text = $"Hola, coge lo que necesites de mi puesto, pero a cambio, necesito que me traigas {objetoNecesario}.";
-                HabladoAntes = true;
-            }
-            else
-            {
-                textoMensaje.text = "Todavía no tienes mi " + objetoNecesario + "? Tráemelo por favor, lo necesito.";
-            }
+            textoMensaje.text = $"Gracias por la {objetoNecesario}, ya me llegó gracias al pollito. Si necesitas coger algo más de mi puesto, adelante.";
+        }
+        else if (habladoAntes) // 🛑 Si ya le has hablado pero no has enviado el objeto
+        {
+            textoMensaje.text = $"Todavía no me has mandado la {objetoNecesario}? Cuando la tengas, acércate al pollo del correo, él se encargará de hacérmela llegar. Gracias.";
+        }
+        else // 🆕 Primera interacción
+        {
+            textoMensaje.text = $"Hola, qué tal? Coge lo que quieras de mi puesto, pero por favor, envíame una {objetoNecesario}.";
+            habladoAntes = true;
+            haSolicitadoPedido = true; // ✅ Marcamos que este mercader ya ha hecho una petición
         }
     }
 
-    // ✅ Método para solo DETECTAR el objeto sin eliminarlo
-    bool JugadorTieneObjeto()
+    // ✅ Método que el Pollo del Correo llamará cuando reciba el objeto correcto
+    public void RecibirPedido()
     {
-        return (VerificarObjeto(detector1) || VerificarObjeto(detector2) || VerificarObjeto(detector3));
+        pedidoEnviado = true;
     }
-
-
-    // ✅ Método para SOLO verificar si hay un objeto en el detector
-    bool VerificarObjeto(GameObject detector)
-    {
-        if (detector != null)
-        {
-            DetectorObjetos scriptDetector = detector.GetComponent<DetectorObjetos>();
-            return scriptDetector != null && scriptDetector.objetoDetectado == objetoNecesario;
-        }
-        return false;
-    }
-    bool VerificarYEliminarObjeto(GameObject detector)
-    {
-        if (detector != null)
-        {
-            // 💡 Aseguramos que el GameObject tiene el script `DetectorObjetos`
-            DetectorObjetos scriptDetector = detector.GetComponent<DetectorObjetos>();
-
-            if (scriptDetector != null && scriptDetector.objetoDetectado == objetoNecesario)
-            {
-                scriptDetector.objetoDetectado = ""; // Borramos el objeto detectado
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // ✅ Método para ELIMINAR el objeto tras completar la misión
-    void EliminarObjeto()
-    {
-        VerificarYEliminarObjeto(detector1);
-        VerificarYEliminarObjeto(detector2);
-        VerificarYEliminarObjeto(detector3);
-    }
-    */
 }
