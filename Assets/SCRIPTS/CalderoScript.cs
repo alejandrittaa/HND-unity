@@ -8,6 +8,10 @@ public class CalderoScript : MonoBehaviour
     private List<string> ingredientesEnCaldero = new List<string>(); // Lista de ingredientes añadidos
     private Animator animator; // Referencia al Animator del caldero
     private PlayerScript player;
+    [SerializeField] private GameObject pocion; // Referencia al objeto de la poción
+    [SerializeField] private GameObject receta1; // Referencia al receta
+    [SerializeField] private GameObject receta2; // Referencia al receta
+    [SerializeField] private GameObject receta3; // Referencia al receta
 
     void Start()
     {
@@ -29,9 +33,12 @@ public class CalderoScript : MonoBehaviour
             {
                 Debug.Log("¡Poción Completa!");
                 //dejamos de mostrar la receta, ya que ya está completada
-                player.recetaVisible = false;
-                // esperamos 2 segundos y popeamos una poción
-
+                receta1.SetActive(false);
+                receta2.SetActive(false);
+                receta3.SetActive(false);
+                // activamos la pocion
+                Debug.Log("¡Poción Visible!");
+                pocion.SetActive(true);    
             }
         }
         else
