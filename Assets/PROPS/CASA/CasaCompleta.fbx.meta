@@ -3,7 +3,87 @@ guid: e634840b50ae26c458ad789e40b4a858
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cojines
+    second: {fileID: 2100000, guid: 9db2cdaae58c57c4e9e50ac1295d5175, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madera
+    second: {fileID: 2100000, guid: 36019f7d039378c4d8b7228123e5296d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #11
+    second: {fileID: 2100000, guid: 355e3e1202a87124d85e8c308508516b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #3
+    second: {fileID: 2100000, guid: 94786373481932b489b4d933d123d4c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #4
+    second: {fileID: 2100000, guid: 86d34eb7dd4b13c48b8487ff14366586, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #5
+    second: {fileID: 2100000, guid: b4e854e0c97f79f40b3aabdadc0b1184, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 6afc37fe32bc4b24f9bdd06923e1df8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 8318aaaacec62134084dffd55ff34bb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: aa5ad38447a56464d9142dcbdaf558e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.013
+    second: {fileID: 2100000, guid: d9cdad96d5ecb194db413d0c00bb77a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paredes
+    second: {fileID: 2100000, guid: 842c9facd0476784395def0aea3e0ecc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Suelo1
+    second: {fileID: 2100000, guid: 496ac103fa9b1b04f93e72932babfa34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Suelo2
+    second: {fileID: 2100000, guid: 3e1ef6ac564131f4b9a674022b8f4ed1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tierra
+    second: {fileID: 2100000, guid: 7187597a3e8c9da4d86a017713f46fa0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tronco
+    second: {fileID: 2100000, guid: 063ffac4606725a4ebfb0985462f6728, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hojas
+    second: {fileID: 2100000, guid: c709ba6807927f3438ecdcfea811e7bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
