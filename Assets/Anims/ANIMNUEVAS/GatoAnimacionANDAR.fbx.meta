@@ -3,7 +3,42 @@ guid: 27e61d847cda17e40b5c3b66c8914d8d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 61e6e833d5b850e46be59371f3a5e797, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_clothes
+    second: {fileID: 2100000, guid: 23d2cc18398e94c409aa1b2b94d3b4d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_head
+    second: {fileID: 2100000, guid: e61276455eae79a458b5d1a034c23250, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_left_arm.001
+    second: {fileID: 2100000, guid: 8e988a2aff2d6d94d894d285bc35c219, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_left_arm.002
+    second: {fileID: 2100000, guid: c5b5aa9613034204db6fe01e713e92ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_left_leg
+    second: {fileID: 2100000, guid: 1b3ae6122b9cfa14a8a8d0f6072f3c69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_right_leg
+    second: {fileID: 2100000, guid: 96731770c63f0e448985163d1b76a0cb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
