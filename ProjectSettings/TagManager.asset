@@ -17,6 +17,7 @@ TagManager:
   - DetectorProximidadCaldero
   - Enfermo1
   - Agarrable
+  - Pocion
   layers:
   - Default
   - TransparentFX
