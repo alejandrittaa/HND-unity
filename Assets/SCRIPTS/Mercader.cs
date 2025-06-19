@@ -29,6 +29,7 @@ public class Mercader : MonoBehaviour
         {
             mensajeUI.SetActive(true);
             MostrarMensaje();
+            Debug.Log("Player detectado");
         }
     }
 
